@@ -15,5 +15,9 @@ public class Team {
         user.addTeam(this);
         users.add(user);
     }
+    public void removeUser(User user){
+        user.removeTeam(this);
+        users.remove(user);
+    }
 
 }

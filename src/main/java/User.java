@@ -22,7 +22,11 @@ public class User {
     public void addTeam(Team team){
         teamList.add(team);
     }
+    public void removeTeam(Team team){
+        teamList.remove(team);
+    }
     public Task createTask(String content){
+
         return new Task(this,content);
     }
 }
