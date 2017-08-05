@@ -8,11 +8,11 @@ import lombok.Data;
 public class User {
     public User(String name){
         this.name=name;
-        this.id.set(count.getAndIncrement());
+        this.id.set(userCount.getAndIncrement());
     }
     private String name;
     private final AtomicInteger id = new AtomicInteger();
-    private static AtomicInteger count = new AtomicInteger();
+    private static AtomicInteger userCount = new AtomicInteger();
     private Team solo;
     private List<Team> teamList = new ArrayList<Team>();
 
