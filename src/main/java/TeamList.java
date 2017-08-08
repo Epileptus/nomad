@@ -7,6 +7,7 @@ import java.util.List;
 
 public class TeamList {
     private List<Team> teamy = new ArrayList<Team>();
+    private List<Task> finishedTasks = new ArrayList<Task>();
 
 }
 
