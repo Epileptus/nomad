@@ -1,12 +1,10 @@
 import lombok.Data;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Data
 public class Team {
-    public Team(List<Task> tasks, List<User> users) {
+    public Team(TaskList tasks, UserList users) {
         this.tasks = tasks;
         this.users = users;
         id.set(teamCount.getAndIncrement());
@@ -15,8 +13,8 @@ public class Team {
     private User author;
     private final AtomicInteger id = new AtomicInteger();
     private static AtomicInteger teamCount  = new AtomicInteger();
-    private List<User> users = new ArrayList<User>();
-    private List<Task> tasks = new ArrayList<Task>();
+    private UserList users = new UserList();
+    private TaskList tasks = new TaskList();
 
     public void addTask(Task task) {
         tasks.add(task);
@@ -26,5 +24,8 @@ public class Team {
         tasks.remove(task);
     }
 
-
+    @Override
+    public String toString(){
+        return "Users: "+users+"\nTasks: "+tasks;
+    }
 }

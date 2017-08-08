@@ -3,16 +3,15 @@ import lombok.NoArgsConstructor;
 import java.util.ArrayList;
 
 @NoArgsConstructor
-public class TeamList extends ArrayList<Team> {
-
-    public TeamList(Team team){
+public class TaskList extends ArrayList<Task> {
+    public TaskList(Task task){
         super();
-        add(team);
+        add(task);
     }
 
     @Override
     public String toString(){
-        StringBuilder result= new StringBuilder();
+        StringBuilder result = new StringBuilder();
         for(int i=0 ; i<size() ; i++){
             result.append(get(i));
             if(i!=size()-1)

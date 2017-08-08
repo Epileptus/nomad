@@ -1,31 +1,28 @@
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
 
     public static void main(String[] args){
-        TeamList lista1 = new TeamList();
-        User kuba = new User("Kuba");
-        User marek = new User("Marek");
-        User bartek = new User("Bartek");
-        bartek.setTeamList(lista1);
-        kuba.setTeamList(lista1);
-        marek.setTeamList(lista1);
-        List<Task> tasked = new ArrayList<Task>();
-        Task sranie = new Task(kuba,"zesrtaj sie");
-        tasked.add(sranie);
-        tasked.add(new Task(kuba,"i to zjedz"));
-        List<User> usered = new ArrayList<User>();
-        usered.add(marek);
-        usered.add(bartek);
-        kuba.addTeam(tasked,usered);
-        kuba.getTasks();
-        marek.getTasks();
-        marek.finishTask(sranie);
-        marek.getTasks();
-        bartek.getTasks();
-        marek.showFinishedTasks();
-        kuba.showFinishedTasks();
+//        Department lista1 = new Department();
+//
+//
+//        TaskList listataskow = new TaskList();
+//        Task sranie = new Task( "zesrtaj sie");
+//        Task jedzenie = new Task("i to zjedz");
+//        listataskow.add(sranie);
+//        listataskow.add(jedzenie);
+//
+//        User kuba = new User("Kuba", lista1);
+//        User marek = new User("Marek", lista1);
+//        User bartek = new User("Bartek", lista1);
+//        UserList usered = new UserList();
+//        usered.add(marek);
+//        usered.add(bartek);
+//
+//        kuba.addTeam(listataskow,usered);
+//        //marek.showTasks();
+//        System.out.println("\n"+lista1.getTeams().get(0));
+//        marek.finishTask(sranie);
+//        System.out.println("\n"+lista1.getTeams().get(0));
 
 
     }
