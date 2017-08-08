@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d237098-36f8-46d9-b381-9452e0b3d687" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Department.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/TaskList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/UserList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/User.class" afterPath="$PROJECT_DIR$/target/classes/User.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/UserTest.class" afterPath="$PROJECT_DIR$/target/test-classes/UserTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Task.java" afterPath="$PROJECT_DIR$/src/main/java/Task.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Team.java" afterPath="$PROJECT_DIR$/src/main/java/Team.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/TeamList.java" afterPath="$PROJECT_DIR$/src/main/java/TeamList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/User.java" afterPath="$PROJECT_DIR$/src/main/java/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/TaskTest.java" afterPath="$PROJECT_DIR$/src/test/java/TaskTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/UserTest.java" afterPath="$PROJECT_DIR$/src/test/java/UserTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -456,7 +445,7 @@
       <workItem from="1501926491442" duration="620000" />
       <workItem from="1502122158928" duration="13154000" />
       <workItem from="1502180800658" duration="28000" />
-      <workItem from="1502200108560" duration="1821000" />
+      <workItem from="1502200108560" duration="1853000" />
     </task>
     <task id="LOCAL-00001" summary="XD">
       <created>1501926905446</created>
@@ -479,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1502184323659</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="optymalizacja kilku metod, usunięcie pola isDone">
+      <created>1502202847531</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1502202847531</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -515,7 +511,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39218000" />
+    <option name="totallyTimeSpent" value="39250000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
