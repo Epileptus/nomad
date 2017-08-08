@@ -14,19 +14,61 @@ public class User {
     private final AtomicInteger id = new AtomicInteger();
     private static AtomicInteger userCount = new AtomicInteger();
     private Team solo;
-    private List<Team> teamList = new ArrayList<Team>();
+    private TeamList teamList;
+    private List<Task> ownedTasks = new ArrayList<Task>();
 
-    public void addSoloTask(Task task){
-        solo.addTask(task);
+
+
+    public void addTeam(List<Task> tasks, List<User> users)
+    {for(int z=0; z<tasks.size();z++){
+        ownedTasks.add(tasks.get(z));
     }
-    public void addTeam(Team team){
-        teamList.add(team);
+        int k = 0;
+        for(int i=0;  i<teamList.getTeamy().size(); i++){
+            if(users.equals(teamList.getTeamy().get(i).getUsers())){
+                for(int j=0; j<tasks.size(); j++)
+                teamList.getTeamy().get(i).addTask(tasks.get(j));
+                k++;
+            }
+        }
+        if(k==0) {
+            Team new1 = new Team(tasks, users);
+            teamList.getTeamy().add(new1);
+        }
     }
     public void removeTeam(Team team){
-        teamList.remove(team);
+        teamList.getTeamy().remove(team);
     }
     public Task createTask(String content){
 
         return new Task(this,content);
     }
+
+    public void getTasks(){
+       for(int i=0; i<teamList.getTeamy().size(); i++){
+           for(int j=0; j<teamList.getTeamy().get(i).getTasks().size();j++){
+               if(teamList.getTeamy().get(i).getUsers().contains(this) && !teamList.getTeamy().get(i).getTasks().get(j).isDone())
+               System.out.print(teamList.getTeamy().get(i).getTasks().get(j).getContent());
+           }
+       }
+
+    }
+    public void finishTask(Task task){
+        for(int i=0; i<teamList.getTeamy().size();i++) {
+            if (teamList.getTeamy().get(i).getTasks().contains(task)) {
+                task.setDone(true);
+                break;
+            }
+        }
+    }
+    public void showFinishedTasks(){
+        System.out.print("Ukonczone zadania: ");
+        for(int i=0; i<teamList.getTeamy().size(); i++){
+            for( int j = 0 ; j< teamList.getTeamy().get(i).getTasks().size();j++){
+                if(teamList.getTeamy().get(i).getTasks().get(j).isDone())
+                    System.out.println(teamList.getTeamy().get(i).getTasks().get(j).getContent());
+            }
+        }
+    }
+
 }

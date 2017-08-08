@@ -9,6 +9,7 @@ public class Task {
         this.content=content;
         this.id.set(taskCount.getAndIncrement());
     }
+    private boolean done=false;
     private final User author;
     private final AtomicInteger id = new AtomicInteger();
     private static AtomicInteger taskCount = new AtomicInteger();
