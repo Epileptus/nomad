@@ -45,22 +45,9 @@ public class UserTest {
         Task task3 = new Task("C");
         User marcin = new User("Marcin");
         TaskList taskList2 = new TaskList();
-        UserList userList2 = new UserList();
+        UserList userList2 = new UserList(marcin);
         taskList2.add(task3);
-        userList2.add(marcin);
         kuba.addTeam(taskList2,userList2);
-        //team o indeksie 1 dostaje tasklist 2
-        assertEquals(2,department.getTeams().size());
-
-        Task task4 = new Task("D");
-        taskList2.add(task4);
-        assertTrue(department.getTeams().get(1).getTasks().contains(task4));
-        assertFalse(department.getTeams().get(0).getTasks().contains(task4));
-
-        kuba.addTeam(taskList2,userList);
-        assertTrue(department.getTeams().get(0).getTasks().contains(task4));
-
-
     }
     @Test
     public void ICanAddTaskToATeam() throws Exception{
@@ -68,7 +55,7 @@ public class UserTest {
         Task task4 = new Task("D");
         kuba.addTeam(new TaskList(task4),userList);
         assertEquals(1,department.getTeams().size());
-        //assertTrue()
+        assertTrue(bartek.getTasks().contains(task4));
     }
     @Test
     public void ICanShowTasks() throws Exception{

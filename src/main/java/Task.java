@@ -1,8 +1,10 @@
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Data
+@NoArgsConstructor
 public class Task {
     public Task(String content){
         this.content=content;
